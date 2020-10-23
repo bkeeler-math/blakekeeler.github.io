@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+:root {
+  --nav-spacing: 1.5em;
+}
 html, body {
   font-family: 'Noto Sans', sans-serif;
 }
@@ -7,6 +10,19 @@ a {
 }
 .nav-name-title {
   font-size: 8pt;
+}
+.nav-header-container {
+  display: flex;
+  flex-direction: row;
+  height: 8vh;
+  align-items: center;
+}
+.navbar-toggler {
+  display: none;
+  border: none;
+}
+.navbar-collapse {
+  align-items: flex-start;
 }
 .navbar {
   padding: 0;
@@ -17,17 +33,18 @@ a {
   box-shadow: -6px 0px 19px 4px rgba(0,0,0,0.75);
 }
 .navbar-brand {
+  margin: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
+  padding: 0 calc(var(--nav-spacing) - 0.3em);
   padding-bottom: 1em;
 }
 .navbar-nav {
   width: 100%;
 }
 .nav-item {
-  padding: 0 1em;
+  padding: 0 var(--nav-spacing);
 }
   .nav-item:hover {
     background-color: #0a0c0d;
@@ -39,7 +56,7 @@ a {
   width: 100px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 1em;
+  margin: var(--nav-spacing);
   -webkit-box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 16px -8px rgba(0,0,0,0.75);
@@ -55,8 +72,7 @@ a {
   align-items: flex-start;
 }
 .content {
-  margin: 2em;
-  margin-left: 4em;
+  margin: 3em;
   position: absolute;
   left: 16em;
 }
@@ -65,4 +81,29 @@ a {
 }
 .content-section {
   margin-bottom: 2rem;
+}
+/* Resizing */
+@media screen and (max-width: 480px) {
+  .fixed-left {
+    bottom: none;
+    width: 100vw;
+    height: 8vh;
+  }
+  .display-pic {
+    display: none;
+  }
+  .content {
+    top: 8vh;
+    left: 0;
+  }
+  .navbar-brand {
+    padding-top: 0.3em;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-nav {
+    background-color: #222;
+    width: 100vw;
+  }
 }
