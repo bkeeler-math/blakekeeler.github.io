@@ -83,7 +83,7 @@ a {
   margin-bottom: 2rem;
 }
 /* Resizing */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .fixed-left {
     bottom: none;
     width: 100vw;
