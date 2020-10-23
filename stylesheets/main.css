@@ -97,7 +97,7 @@ a {
     left: 0;
   }
   .navbar-brand {
-    padding-top: 0.3em;
+    padding: 0.8em;
   }
   .navbar-toggler {
     display: block;
@@ -105,5 +105,8 @@ a {
   .navbar-nav {
     background-color: #222;
     width: 100vw;
+  }
+  .content {
+    margin: 1em;
   }
 }
